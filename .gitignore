@@ -1,0 +1,20 @@
+# Gradle
+.gradle/
+build/
+*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Config (user-specific)
+run/
+
+# Claude
+CLAUDE.md
+CLAUDE-*.md
