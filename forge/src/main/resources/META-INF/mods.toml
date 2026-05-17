@@ -5,7 +5,7 @@ issueTrackerUrl="https://github.com/Cukkoo12/SoundPulse/issues"
 
 [[mods]]
 modId="soundpulse"
-version="1.0.0"
+version="1.0.1-forge"
 displayName="SoundPulse"
 description="Visualizes in-game sounds as directional waves on your HUD"
 authors="Cukkoo"
