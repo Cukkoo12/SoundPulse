@@ -1,0 +1,12 @@
+modLoader="javafml"
+loaderVersion="[4,)"
+license="MIT"
+issueTrackerUrl="https://github.com/Cukkoo12/SoundPulse/issues"
+
+[[mods]]
+modId="soundpulse"
+version="1.0.0"
+displayName="SoundPulse"
+description="Visualizes in-game sounds as directional waves on your HUD"
+authors="Cukkoo"
+logoFile="icon.jpeg"

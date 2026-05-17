@@ -1,0 +1,45 @@
+plugins {
+    id 'java'
+    id 'base'
+    id 'net.minecraftforge.gradle' version '[7.0.17,8)'
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base { archivesName = project.archives_base_name }
+
+java.toolchain.languageVersion = JavaLanguageVersion.of(25)
+
+minecraft {
+    runs {
+        configureEach {
+            workingDir = layout.projectDirectory.dir('run')
+            systemProperty 'forge.enabledGameTestNamespaces', project.mod_id
+        }
+        register('client') { args '--mixin', 'soundpulse.mixins.json' }
+        register('server') { args '--nogui' }
+    }
+}
+
+repositories {
+    minecraft.mavenizer(it)
+    maven fg.forgeMaven
+    maven fg.minecraftLibsMaven
+    mavenCentral()
+}
+
+dependencies {
+    implementation minecraft.dependency("net.minecraftforge:forge:${project.forge_version}")
+}
+
+// FG7 dev mode: force compiled classes into resources so @Mod class is found
+tasks.named('compileJava') {
+    destinationDirectory = file("$buildDir/resources/main")
+}
+
+jar {
+    manifest {
+        attributes(['MixinConfigs': 'soundpulse.mixins.json'])
+    }
+}
