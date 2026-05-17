@@ -2,7 +2,7 @@
   "required": true,
   "package": "com.cukkoo.soundpulse.mixin",
   "compatibilityLevel": "JAVA_21",
-  "client": ["SoundManagerMixin", "GuiMixin"],
+  "client": [],
   "injectors": {
     "defaultRequire": 1
   }

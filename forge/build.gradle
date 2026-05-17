@@ -33,7 +33,7 @@ dependencies {
     implementation minecraft.dependency("net.minecraftforge:forge:${project.forge_version}")
 }
 
-// FG7 dev mode: force compiled classes into resources so @Mod class is found
+// FG7 dev mode: needed for @Mod class discovery
 tasks.named('compileJava') {
     destinationDirectory = file("$buildDir/resources/main")
 }
