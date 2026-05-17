@@ -4,7 +4,7 @@ SoundPulse is a lightweight, high-performance client-side utility mod for Minecr
 
 Whether you are playing with your own music, have hearing difficulties, or simply want a cleaner way to track threats, SoundPulse delivers a sleek, modern solution.
 
-![SoundPulse Demo](soundpulse-demo.gif)
+![SoundPulse Demo](https://raw.githubusercontent.com/Cukkoo12/SoundPulse/main/soundpulse-demo.gif)
 
 ---
 
