@@ -18,3 +18,10 @@ run/
 # Claude
 CLAUDE.md
 CLAUDE-*.md
+
+# Generated class files
+net/
+
+# Source video (unedited)
+kayit.mp4
+kayıt.mp4

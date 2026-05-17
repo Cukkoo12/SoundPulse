@@ -1,34 +1,73 @@
-# SoundPulse
+# 🔊 SoundPulse
 
-Client-side Minecraft mod that captures in-game sounds and displays directional visual indicators on your HUD. See where sounds are coming from at a glance.
+SoundPulse is a lightweight, high-performance client-side utility mod for Minecraft Fabric 26.1.x. It visualizes in-game sounds as minimalist, directional waves on your HUD, providing a tactical edge and enhanced spatial awareness without the clutter of vanilla subtitles.
 
-![SoundPulse](icon.jpeg)
+Whether you are playing with your own music, have hearing difficulties, or simply want a cleaner way to track threats, SoundPulse delivers a sleek, modern solution.
 
-## Features
+![SoundPulse Demo](soundpulse-demo.gif)
 
-- **Directional Sound Visualization** — Detects where a sound originates (front, back, left, right, corners) and draws fading arc indicators on the corresponding screen edge
-- **Distance Scaling** — Close sounds produce thicker, more detailed arcs that expand aggressively; distant sounds are thinner and subtler
-- **Category Colors** — Each sound category has a distinct color:
-  - Hostile (red), Blocks (orange), Ambient (green), Players (blue), Music (purple), Weather (cyan), Neutral (yellow), Voice (gray)
-- **Threat Alerts** — Creeper priming and TNT ignition trigger a fast red strobe effect for immediate awareness
-- **Sound Ignore List** — Block specific sounds from showing any overlay
-- **Customizable** — Toggle the mod on/off, enable/disable categories, change colors, all in-game
+---
 
-## Commands
+## ✨ Key Features
+
+### 🧭 8-Way Directional Tracking
+
+SoundPulse doesn't just tell you a sound happened — it shows you exactly where it came from. The HUD displays curved wave icons pointing to 8 specific directions:
+
+- **Front, Back, Left, Right**
+- **Front-Right, Front-Left, Back-Right, Back-Left**
+
+### 📏 Distance-Based Scaling
+
+The visual intensity of the waves adapts to the proximity of the sound source:
+
+- **Near:** Thick, aggressive lines for immediate threats
+- **Far:** Thin, subtle lines for distant background noises
+
+### ⚠️ Critical Threat Alerts (Strobe Effect)
+
+Never get blindsided by a Creeper again. High-priority sounds like Creeper hissing or TNT priming trigger a rapid red strobe/flash effect on the corresponding direction of the HUD.
+
+### 🛡️ Smart Filtering & Presets
+
+To keep your screen clean, SoundPulse starts with **Hostile** sounds enabled by default. You can easily toggle other categories (Blocks, Players, Ambient, Music, Weather, Neutral, Voice) to suit your playstyle.
+
+### 🎨 Category Colors
+
+Each sound category has a distinct color:
+
+| Category | Color |
+|----------|-------|
+| Hostile | Red |
+| Blocks | Orange |
+| Ambient | Green |
+| Players | Blue |
+| Music | Purple |
+| Weather | Cyan |
+| Neutral | Yellow |
+| Voice | Gray |
+
+---
+
+## 💻 Commands
+
+SoundPulse is fully configurable in-game. Every change you make is instantly saved to your configuration file.
 
 | Command | Description |
 |---------|-------------|
-| `/soundpulse toggle` | Enable/disable the mod |
-| `/soundpulse config` | View current configuration |
-| `/soundpulse category <name> <true/false>` | Enable or disable a sound category |
-| `/soundpulse color <category> <RRGGBB>` | Set a custom color for a category |
-| `/soundpulse ignore add <sound_id>` | Add a sound to the ignore list |
-| `/soundpulse ignore remove <sound_id>` | Remove a sound from the ignore list |
+| `/soundpulse toggle` | Enable or disable the mod entirely |
+| `/soundpulse config` | View your current settings and active categories in chat |
+| `/soundpulse category <name> <true/false>` | Toggle entire sound categories on or off |
+| `/soundpulse color <category> <hex>` | Change the wave color for a specific category |
+| `/soundpulse ignore add <id>` | Add a specific sound to the ignore list |
+| `/soundpulse ignore remove <id>` | Remove a sound from the ignore list |
 | `/soundpulse ignore list` | List all ignored sounds |
 
-## Configuration
+---
 
-Settings are saved to `config/soundpulse.json` and can be edited manually:
+## ⚙️ Configuration
+
+Settings are saved to `config/soundpulse.json`:
 
 ```json
 {
@@ -40,21 +79,11 @@ Settings are saved to `config/soundpulse.json` and can be edited manually:
 }
 ```
 
-Only the **HOSTILE** category is enabled by default. Use the `/soundpulse category` command to enable others.
+Only the **HOSTILE** category is enabled by default. Use `/soundpulse category` to enable others.
 
-## Requirements
+---
 
-- Minecraft 26.1.x
-- Fabric Loader >=0.18.5
-- Fabric API >=0.145.4
-
-## Installation
-
-1. Install Fabric Loader for Minecraft 26.1.x
-2. Download Fabric API and place it in your `mods` folder
-3. Download SoundPulse and place it in your `mods` folder
-
-## Building from source
+## 🔧 Building from Source
 
 ```bash
 ./gradlew build
@@ -62,6 +91,8 @@ Only the **HOSTILE** category is enabled by default. Use the `/soundpulse catego
 
 The compiled JAR will be in `build/libs/`.
 
-## License
+---
 
-MIT
+## 📄 License
+
+MIT © Cukkoo
