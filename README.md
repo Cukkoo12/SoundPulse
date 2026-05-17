@@ -81,15 +81,6 @@ Settings are saved to `config/soundpulse.json`:
 
 Only the **HOSTILE** category is enabled by default. Use `/soundpulse category` to enable others.
 
----
-
-## 🔧 Building from Source
-
-```bash
-./gradlew build
-```
-
-The compiled JAR will be in `build/libs/`.
 
 ---
 
